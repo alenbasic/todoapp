@@ -63,7 +63,10 @@ const TodoItem = (props) => {
                     onChange={(event, id) => props.onCompleteHandler(event, props.id)}
                     checked={props.completed}
                     className="mr-5" type="checkbox" />
-                <label style={completedTodoStyle} onDoubleClick={(event, id) => props.onDoubleClickHandler(event, props.id)}>
+                <label style={completedTodoStyle} 
+                       onDoubleClick={(event, id) => props.onDoubleClickHandler(event, props.id)}
+                       onTouchEndCapture={(event, id) => props.onDoubleClickHandler(event, props.id)}
+                >
                     {props.todoItem}
                 </label>
                 <button
