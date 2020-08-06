@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {isMobile} from 'react-device-detect';
 import TodoItem from './TodoItem';
 import './bulma.css';
 
@@ -17,6 +18,7 @@ class Todolist extends Component {
 
       currentToDoRef = React.createRef();
       addToDoItemRef = React.createRef();
+      helpText = "Double click on a to-do to edit it!"
 
       //  load todos if we have uses the application previously
 
@@ -178,6 +180,10 @@ class Todolist extends Component {
 
         // renders a list of todo components to be rendered in the list
 
+        if (isMobile) {
+          this.helpText = "Tap on a to-do to edit it!";
+        }
+
         const todoItems = this.state.todoItems.map(todo => {
             return ( <TodoItem
                id={todo.id}
@@ -211,7 +217,7 @@ class Todolist extends Component {
                       {todoItems}
                   </div>
                   </div>
-                  <div className="mt-5 column is-one-third is-offset-one-third notification has-text-centered is-success" >Double click on a to-do to edit it!</div>
+                  <div className="mt-5 column is-one-third is-offset-one-third notification has-text-centered is-success" >{this.helpText}</div>
 
               </section>
 
