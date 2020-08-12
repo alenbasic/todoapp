@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="bulma.min.css">
+
+    <script>
+      function toggleListView() {
+        let innerList = document.getElementsByClassName("temp-class-name")[0];
+        if (innerList.style.display === 'none' || innerList.style.display === '') {
+          innerList.style.display = "block";
+        } else {
+          innerList.style.display = "none";
+        }
+      }
+      function toggleEditMode() {
+        let hiddenText = document.getElementsByClassName("todo-item-hidden-text")[0];
+        let visibleText = document.getElementsByClassName("todo-item-display-text")[0];
+
+        if (visibleText.style.visibility == "hidden") {
+          hiddenText.style.visibility = "hidden";
+          visibleText.style.visibility = "visible";
+        } else {
+          visibleText.style.visibility = "hidden";
+          hiddenText.style.visibility = "visible";
+        }
+
+
+
+
+      }
+    </script>
+
+    <title>Oscar Notes!</title>
+</head>
+<body>
+    <div class="main-body">
+        <h1 class="title title-extra-styles">Current To-Do</h1>
+
+
+        <div class="field has-addons has-addons-centered">
+            <div class="control">
+              <input class="input is-large" type="text" placeholder="What is on your to-do list?">
+            </div>
+            <div class="control">
+              <a class="button is-primary is-large">
+                Add
+              </a>
+            </div>
+          </div>
+        <ul class="todo-list">
+                <li>
+                  <div ondblclick="toggleEditMode()" class="todo-item-container">
+                  <div class="todo-item-display-text">
+                  <input class="checkbox-extra" type="checkbox"/>
+                    <p>Learn React</p>
+                    <p class="help help-extra">Click to add or edit sub-items</p>
+                  </div>
+                  <div class="todo-item-hidden-text">
+                    <input class="input" value="Learn React - Hidden"/>
+                  </div>
+                </div>
+              </li>
+                <li><div ondblclick="toggleEditMode()" onclick="toggleListView()" class="todo-item-container">
+                  <div class="todo-item-display-text">
+                  <input class="checkbox-extra" type="checkbox"/>
+                    <p>Learn Angular</p>
+                    <p class="help help-extra">Click to add or edit sub-items</p>
+                  </div>
+                  <div class="todo-item-hidden-text">
+                    <input class="input" value="Learn React - Hidden"/>
+                  </div>
+                </div></li>
+                  <ul class="temp-class-name">  
+                    <li>item 1</li>
+                    <li>item 2</li>
+                    <li>item 3</li>
+                  </ul>
+                  <li><div ondblclick="toggleEditMode()" class="todo-item-container">
+                    <div class="todo-item-display-text">
+                    <input class="checkbox-extra" type="checkbox"/>
+                      <p>Learn TypeScript</p>
+                      <p class="help help-extra">Click to add or edit sub-items</p>
+                    </div>
+                    <div class="todo-item-hidden-text">
+                      <input class="input" value="Learn React - Hidden"/>
+                    </div>
+                  </div></li>
+
+            </ul>
+
+    </div>
+</body>
+</html>

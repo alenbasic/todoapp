@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f3f3f3;
+
+  }
+  
+  .main-body {
+    margin: 0;
+    border: 2px solid rgba(65, 65, 65,0.1);
+    background: #e5e5e8;
+    text-align: center;
+    padding: 40px 50px 50px 50px;
+    height: 600px;
+    max-height: 600px;
+    width: 600px;
+  }
+
+
+  .todo-list > li {
+      background: #f6f6fa;
+      padding: 10px;
+      width: 100%;
+      text-align: left;
+  }
+
+  .todo-list ul li {
+      background: #fafafe;
+      padding: 5px 30px;
+      width: 100%;
+      text-align: left;
+  }
+
+  .todo-list > li:hover,
+  .todo-list ul li:hover {
+      background: white;
+  }
+
+.todo-item-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.todo-item-display-text {
+    grid-area: 1 / 1 / 2 / 2;
+    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.todo-item-hidden-text {
+    grid-area: 1 / 1 / 2 / 2;
+    visibility: hidden; 
+    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.help-extra {
+    text-align: right;
+    flex: auto;
+    opacity: 0.1;
+}
+
+.help-extra:hover {
+    opacity: 1;
+}
+
+.checkbox-extra {
+    margin-right: 10px;
+    opacity: 0.2;
+}
+
+.checkbox-extra:hover {
+    opacity: 0.9;
+}
+
+.temp-class-name {
+    display: none
+}

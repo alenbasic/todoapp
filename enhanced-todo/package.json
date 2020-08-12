@@ -1,0 +1,18 @@
+{
+  "name": "css-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "browser-sync ./src -w"
+  },
+  "author": "Alen Basic",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.26.12"
+  },
+  "dependencies": {
+    "bulma": "^0.9.0"
+  }
+}
